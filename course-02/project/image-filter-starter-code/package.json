@@ -29,8 +29,6 @@
   },
   "dependencies": {
     "express": "^4.17.0",
-    "jimp": "^0.6.4",
-    "ts-node": "^8.2.0",
-    "typescript": "^3.4.5"
+    "jimp": "^0.6.4"
   }
 }
