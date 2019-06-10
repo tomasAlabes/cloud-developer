@@ -1,5 +1,6 @@
 # Udagram Image Filtering Microservice
 
+Beanstalk call: http://imagefilter-env.d8y6yghm4k.us-west-1.elasticbeanstalk.com/filteredimage?image_url=https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg
 CloudFront URL: https://d3a5ruhadtozw4.cloudfront.net/index.html
 
 ## Tasks

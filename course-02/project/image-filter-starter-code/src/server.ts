@@ -31,11 +31,14 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   app.get( "/filteredimage", async ( req, res ) => {
     const image_url = req.query.image_url
-    if(!image_url) res.status(404).send('image_url missing as query parameter')
+    if(!image_url) res.status(400).send('image_url missing as query parameter')
     const imgUrl = await filterImageFromURL(image_url)
-    deleteLocalFiles([imgUrl])
-    res.send(imgUrl)
-  } );
+    console.log(`Serving image from ${imgUrl}...`)
+    res.sendFile(imgUrl, () => {
+      console.log("Deleting local files...")
+      deleteLocalFiles([imgUrl])
+    })
+  });
   
   //! END @TODO1
   
